@@ -99,8 +99,10 @@ function login () {
     // Push to Firebase Database
     database_ref.child('users/' + user.uid).update(user_data)
 
-    // DOne
-    alert('User Logged In!!')
+    // Done
+    // alert('User Logged In!!')
+
+    window.location = 'index.html'
 
   })
   .catch(function(error) {
