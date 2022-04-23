@@ -23,8 +23,6 @@ function register () {
   email = document.getElementById('email').value
   password = document.getElementById('password').value
   full_name = document.getElementById('full_name').value
-  favourite_song = document.getElementById('favourite_song').value
-  milk_before_cereal = document.getElementById('milk_before_cereal').value
 
   // Validate input fields
   if (validate_email(email) == false || validate_password(password) == false) {
@@ -32,7 +30,7 @@ function register () {
     return
     // Don't continue running the code
   }
-  if (validate_field(full_name) == false || validate_field(favourite_song) == false || validate_field(milk_before_cereal) == false) {
+  if (validate_field(full_name) == false) {
     alert('One or More Extra Fields is Outta Line!!')
     return
   }
@@ -50,8 +48,6 @@ function register () {
     var user_data = {
       email : email,
       full_name : full_name,
-      favourite_song : favourite_song,
-      milk_before_cereal : milk_before_cereal,
       last_login : Date.now()
     }
 
@@ -78,7 +74,7 @@ function login () {
 
   // Validate input fields
   if (validate_email(email) == false || validate_password(password) == false) {
-    alert('Email or Password is Outta Line!!')
+    alert('Email or Password is Not Correct')
     return
     // Don't continue running the code
   }
@@ -147,5 +143,39 @@ function validate_field(field) {
     return false
   } else {
     return true
+  }
+}
+
+function startTimer(duration, display) {
+  var timer = duration, minutes, seconds;
+  setInterval(function () {
+      minutes = parseInt(timer / 60, 10)
+      seconds = parseInt(timer % 60, 10);
+
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+
+      display.textContent = minutes + ":" + seconds;
+
+      if (--timer < 0) {
+          timer = duration;
+      }
+  }, 1000);
+}
+
+window.onload = function () {
+  var fiveMinutes = 60 * 5,
+      display = document.querySelector('#time');
+  startTimer(fiveMinutes, display);
+};
+
+var lightbulb = document.getElementById("lightbulb");
+lightbulb.onclick = function(){
+  document.body.classList.toggle("dark-theme");
+  if(document.body.classList.contains("dark-theme")){
+    lightbulb.src = "assets/images/light-yellow.png"
+  }
+  else{
+    lightbulb.src = "assets/images/light-black.png"
   }
 }

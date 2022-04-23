@@ -21,7 +21,6 @@ Table of contents
 10. preloader
 11. search
 12. portfolio
-
 --------------------------------------------- */
 /* 
 ---------------------------------------------
@@ -34,6 +33,18 @@ font & reset css
 reset
 --------------------------------------------- 
 */
+
+:root{
+  --primary-color: #fff;
+  --secondary-color: #000;
+}
+.dark-theme{
+  --primary-color: #000;
+  --secondary-color: #fff;
+}
+
+
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
 pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
 s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
@@ -82,7 +93,7 @@ header, nav, section, article, aside, footer, hgroup {
 html, body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
-  background-color: #fff;
+  background-color: var(--primary-color);
   font-size: 16px;
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
@@ -118,9 +129,24 @@ img {
 global styles
 --------------------------------------------- 
 */
+
+.iframe-container{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; 
+  height: 0;
+}
+.iframe-container iframe{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 80%;
+  height: 80%;
+}
+
 html,
 body {
-  background: #fff;
+  background: var(--primary-color);
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -198,7 +224,7 @@ body {
 }
 
 section {
-  margin-top: 140px;
+  margin-top: 50px;
 }
 
 #contact-section {
@@ -222,12 +248,12 @@ section {
 }
 
 .section-heading h4 {
-  margin-top: 10px;
-  line-height: 40px;
+  margin-top: 5px;
+  line-height: 10px;
   font-size: 28px;
   font-weight: 900;
   text-transform: capitalize;
-  color: #111;
+  color: #000;
 }
 
 .section-heading h4 em {
@@ -239,6 +265,10 @@ section {
   margin-top: 30px;
 }
 
+#lightbulb{
+  width: 50px;
+  cursor: pointer;
+}
 
 /* 
 ---------------------------------------------
@@ -291,6 +321,8 @@ header
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
+
+
 
 .background-header .main-nav .logo {
   line-height: 75px;
@@ -672,6 +704,72 @@ banner
 
 section.main-banner {
   margin-top: 0px;
+ 
+}
+
+section.main-banner .section-heading {
+  text-align: center;
+}
+
+section.main-banner #contact {
+  position: relative;
+  z-index: 5;
+  background-color: #fff;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
+  padding: 40px;
+}
+
+section.main-banner #contact input {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #f4f7fb;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  font-size: 13px;
+  font-weight: 500;
+  color: #7a7a7a;
+  padding: 0px 15px;
+  margin-bottom: 30px;
+}
+
+section.main-banner #contact textarea {
+  width: 100%;
+  min-height: 140px;
+  max-height: 180px;
+  border-radius: 5px;
+  background-color: #f4f7fb;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  font-size: 13px;
+  font-weight: 500;
+  color: #7a7a7a;
+  padding: 15px;
+  margin-bottom: 30px;
+}
+
+section.main-banner #contact button {
+  float: center;
+  font-size: 13px;
+  color: #fff;
+  background: rgb(219,138,222);
+  background: linear-gradient(-145deg, rgba(219,138,222,1) 0%, rgba(246,191,159,1) 100%);
+  padding: 12px 30px;
+  display: inline-block;
+  border-radius: 5px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all .3s;
+  transition: all .3s;
+  border: none;
+  outline: none;
+}
+
+section.main-banner #contact button:hover {
+  opacity: 0.9;
 }
 
 .main-banner {
@@ -701,7 +799,6 @@ section.main-banner {
 
 .main-banner .header-text::after {
   position: absolute;
-  background-image: url(../images/banner-left-dec.png);
   width: 214px;
   height: 429px;
   content: '';
@@ -723,9 +820,9 @@ section.main-banner {
   position: relative;
   z-index: 2;
   margin-top: 20px;
-  font-size: 64px;
-  color: #111111;
-  font-weight: 900;
+  font-size: 50px;
+  color: var(--secondary-color);
+  font-weight: 700;
   line-height: 74px;
   margin-bottom: 40px;
 }
@@ -1105,7 +1202,6 @@ section.contact-us {
 section.contact-us:after {
   position: absolute;
   content: '';
-  background-image: url(../images/footer-left-dec.png);
   left: 0px;
   top: 60px;
   width: 267px;
