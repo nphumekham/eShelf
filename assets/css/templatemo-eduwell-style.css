@@ -1087,9 +1087,137 @@ section.simple-cta h4 {
 }
 
 section.simple-cta p {
-  color: #fff;
+  color: rgb(0, 0, 0);
   margin-top: 30px;
   margin-bottom: 40px;
+}
+
+section.simple-cta .naccs {
+  position: relative;
+}
+
+section.simple-cta .naccs .menu div {
+  padding: 15px 30px;
+  text-align: center;
+  border-radius: 5px !important;
+  margin-bottom: 40px;
+  font-size: 20px;
+  color: #111;
+  background-color: #fff;
+  cursor: pointer;
+  vertical-align: middle;
+  font-weight: 900;
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  border: 3px solid rgba(219,138,222,0.5);
+}
+
+section.simple-cta .naccs .menu div.active {
+  color: #dc8cdb;
+  border: 3px solid rgba(219,138,222,1);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+}
+
+section.simple-cta ul.nacc {
+  margin-left: 100px !important;
+  position: relative;
+  min-height: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+section.simple-cta ul.nacc li {
+  background-color: #fff;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateX(50px);
+  position: absolute;
+  list-style: none;
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  border-radius: 15px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+  padding-right: 50px;
+}
+
+section.simple-cta ul.nacc li .left-image {
+  position: absolute;
+  margin-right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+section.simple-cta ul.nacc li .left-image img {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+section.simple-cta ul.nacc li .left-image .price h6 {
+  position: absolute;
+  background: rgb(219,138,222);
+  background: linear-gradient(-145deg, rgba(219,138,222,1) 0%, rgba(246,191,159,1) 100%);
+  color: #fff;
+  top: 20px;
+  left: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  width: 50px;
+  height: 50px;
+  border-radius: 3px;
+  display: inline-block;
+  text-align: center;
+  line-height: 50px;
+}
+
+section.simple-cta ul.nacc li .right-content {
+  padding: 40px 0px;
+  margin-left: 350px;
+}
+
+section.simple-cta ul.nacc li .right-content h4 {
+  font-size: 20px;
+  color: #111;
+  margin-bottom: 25px;
+  font-weight: 800;
+}
+
+section.simple-cta ul.nacc li .right-content ul {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+section.simple-cta ul.nacc li .right-content span {
+  font-size: 14px;
+  font-weight: 600;
+  margin-right: 30px;
+  padding-right: 30px;
+  /* border-right: 2px solid #111; */
+}
+
+section.simple-cta ul.nacc li .right-content .last-span {
+  margin-right: 0px;
+  padding-right: 0px;
+  border-right: none;
+}
+
+section.simple-cta ul.nacc li .right-content p {
+  margin-bottom: 20px;
+}
+
+section.simple-cta ul.nacc li .right-content .text-button {
+  margin-top: 20px;
+}
+
+section.simple-cta ul.nacc li.active {
+  position: relative;
+  transition-delay: 0.3s;
+  z-index: 2;
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+section.simple-cta ul.nacc li p {
+  margin: 0;
 }
 
 
@@ -1157,13 +1285,13 @@ section.testimonials:after {
   color: #dc8cdb;
 }
 
-.testimonials .item img {
+/* .testimonials .item img {
   max-width: 44px;
   z-index: 2;
   position: absolute;
   right: 30px;
   bottom: 30px
-}
+} */
 
 .testimonials .owl-dots {
   text-align: center;
@@ -1362,10 +1490,10 @@ section.page-heading {
   text-align: center;
 }
 
-section.page-heading .header-text {
+/* section.page-heading .header-text {
   border-bottom: 3px solid #eee;
   padding-bottom: 80px;
-}
+} */
 
 section.page-heading .header-text h4 {
   font-size: 17px;
@@ -1380,7 +1508,31 @@ section.page-heading .header-text h1 {
   margin-top: 10px;
 }
 
+section.page-heading ul.social-icons li {
+  display: inline-block;
+  margin: 0px 5px;
+}
 
+section.page-heading ul.social-icons {
+  text-align: center;
+  margin-top: 70px;
+}
+section.page-heading ul.social-icons li a {
+  width: 44px;
+  height: 44px;
+  display: inline-block;
+  text-align: center;
+  line-height: 44px;
+  background-color: #fff;
+  color: #dc8cdb;
+  border-radius: 50%;
+  transition: all .5s;
+}
+
+section.page-heading ul.social-icons li a:hover {
+  background-color: #dc8cdb;
+  color: #fff;
+}
 /*
 ---------------------------------------------
 about us page

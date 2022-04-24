@@ -164,8 +164,6 @@ function startTimer(duration, display) {
   }, 1000);
 }
 
-
-
 var lightbulb = document.getElementById("lightbulb");
 lightbulb.onclick = function(){
   document.body.classList.toggle("dark-theme");
