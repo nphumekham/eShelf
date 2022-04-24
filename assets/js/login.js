@@ -1,4 +1,3 @@
-// Your web app's Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyBFE4zKV-tx564Jbx6zc3OEmkp-ygXycIM",
     authDomain: "its344web.firebaseapp.com",
@@ -17,7 +16,6 @@ firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth()
 const database = firebase.database()
 
-// Set up our register function
 function register () {
   // Get all our input fields
   email = document.getElementById('email').value
@@ -66,7 +64,6 @@ function register () {
   })
 }
 
-// Set up our login function
 function login () {
   // Get all our input fields
   email = document.getElementById('email').value
@@ -110,10 +107,6 @@ function login () {
   })
 }
 
-
-
-
-// Validate Functions
 function validate_email(email) {
   expression = /^[^@]+@\w+(\.\w+)+\w$/
   if (expression.test(email) == true) {
@@ -146,6 +139,14 @@ function validate_field(field) {
   }
 }
 
+function timer(time) {
+// cal in seconds, input in minute
+  var seconds = 60 * time,
+      display = document.querySelector('#time');
+ console.log("in timer"+time);
+  startTimer(seconds, display);
+};
+
 function startTimer(duration, display) {
   var timer = duration, minutes, seconds;
   setInterval(function () {
@@ -163,11 +164,7 @@ function startTimer(duration, display) {
   }, 1000);
 }
 
-window.onload = function () {
-  var fiveMinutes = 60 * 5,
-      display = document.querySelector('#time');
-  startTimer(fiveMinutes, display);
-};
+
 
 var lightbulb = document.getElementById("lightbulb");
 lightbulb.onclick = function(){

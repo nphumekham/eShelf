@@ -72,28 +72,27 @@ https://templatemo.com/tm-573-eduwell
                 <h2>Let's <em>Study!</em></h2>
               </div>
             </div>
-           
           </div>
-         <div class="row">
-          <form id="contact" action="" method="post">
+         <div class="row" id="contact">
             <div class="row">
               <div class="col-lg-12 align-self-center">
+                <div class="header-text">
+                  <h6>Study time start!</h6><br>
+                </div>
                 <div class="section-heading">
                   <h4 class="align-self-center" id="time"></h4>
                 </div>
               </div>
-              <div class="col-lg-6">
-               <fieldset>
-                 <button type="submit" id="form-submit" class="main-gradient-button">Send Message</button>
-               </fieldset>
-             </div>
-             <div class="col-lg-6">
-              <fieldset>
-                <button type="submit" id="form-submit" class="main-gradient-button">Send Message</button>
-              </fieldset>
+              <div class="col-lg-4">
+                <button  class="main-gradient-button" onclick="timer(30);">30 m</button>
+            </div>
+             <div class="col-lg-4">
+                <button  class="main-gradient-button" onclick="timer(60);">1 h</button>
+            </div>
+            <div class="col-lg-4">
+                <button class="main-gradient-button" onclick="timer(120);">2 h</button>
             </div>
             </div>
-          </form>
          </div>
         </div>
         <div class="col-lg-1"></div>
@@ -103,6 +102,13 @@ https://templatemo.com/tm-573-eduwell
           </div>
         </div>
         <div class="col-lg-1"></div>
+      </div>
+      <br><br>
+      <div class="row" id="contact">
+        <div class="header-text">
+          <h6>Jot down your thought on this scrap paper!</h6><br>
+        </div>
+        <textarea name="message" id="message" placeholder="Your Message"></textarea>
       </div>
     </div>
   </section>
