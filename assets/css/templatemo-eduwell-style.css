@@ -852,8 +852,8 @@ section.main-banner .section-heading {
 section.main-banner #contact {
   position: relative;
   z-index: 5;
-  background-color: #fff;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+  background: #ffffff;
+  box-shadow: 0px 0px 15px #fce0eb;
   border-radius: 15px;
   padding: 40px;
 }
@@ -878,13 +878,13 @@ section.main-banner #contact textarea {
   min-height: 140px;
   max-height: 180px;
   border-radius: 5px;
-  background-color: #f4f7fb;
+  background-color: #faeaf0;
   outline: none;
   border: none;
   box-shadow: none;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 500;
-  color: #7a7a7a;
+  color: #000;
   padding: 15px;
   margin-bottom: 30px;
 }
@@ -948,10 +948,10 @@ section.main-banner #contact button:hover {
 .main-banner .header-text h6 {
   position: relative;
   z-index: 2;
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 500;
   text-transform: capitalize;
-  color: #777777;;
+  color: #000;;
 }
 
 .main-banner .header-text h2 {
@@ -1551,9 +1551,9 @@ section.contact-us #contact textarea {
   outline: none;
   border: none;
   box-shadow: none;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 500;
-  color: #7a7a7a;
+  color: #777;
   padding: 15px;
   margin-bottom: 30px;
 }
