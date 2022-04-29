@@ -1,0 +1,184 @@
+body {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    background-color: #fffcff;
+  }
+  button {
+    align-items: center;
+    background-color: #222227;
+    border: 0;
+    border-radius: 100px;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 20px;
+    max-width: 480px;
+    min-height: 40px;
+    min-width: 0px;
+    overflow: hidden;
+    padding: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    touch-action: manipulation;
+    transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+      box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+      color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+  }
+  
+  button:hover,
+  button:focus {
+    background-color: #16437e;
+    color: #ffffff;
+  }
+  
+  button:active {
+    background: #09223b;
+    color: rgb(255, 255, 255, 0.7);
+  }
+  .main-top {
+    padding-top: 80px;
+  }
+  
+  #header {
+    padding: 20px;
+    color: #ffffff;
+    font-size: 26px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between;
+    background-color: #dc8cdb;
+    text-shadow: 0 0.3rem 0.5rem #ffd4fe;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  #header button {
+    background-color: #222227;
+  }
+  #container {
+    width: 770px;
+    box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+  }
+  #weekdays {
+    width: 100%;
+    display: flex;
+    /* justify-content: center; */
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    background-color: #222227;
+    color: #ffffff;
+    text-shadow: 0 0.3rem 0.5rem #ffd4fe;
+  }
+  #weekdays div {
+    width: 100px;
+    padding: 10px;
+    margin: 10px;
+  }
+  #calendar {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #222227;
+  }
+  .day {
+    width: 100px;
+    padding: 10px;
+    height: 100px;
+    cursor: pointer;
+    box-sizing: border-box;
+    /* background-color: white; */
+    margin: 5px;
+    /* box-shadow: 0px 0px 3px #cbd4c2; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+  }
+  .day:hover {
+    background-color: #ffd4fe;
+    color: #dc8cdb;
+  }
+  
+  .day + #currentDay {
+    background-color: #ffd4fe;
+    color: #dc8cdb;
+  }
+  .event {
+    font-size: 10px;
+    padding: 3px;
+    background-color: #58bae4;
+    color: white;
+    border-radius: 5px;
+    max-height: 55px;
+    overflow: hidden;
+  }
+  /* .padding {
+    cursor: default !important;
+    background-color: #fffcff !important;
+    box-shadow: none !important;
+  } */
+  #newEventModal,
+  #deleteEventModal {
+    display: none;
+    z-index: 20;
+    padding: 25px;
+    background-color: #ffd4fe;
+    box-shadow: 0px 0px 3px black;
+    border-radius: 5px;
+    width: 350px;
+    top: 200px;
+    left: calc(50% - 175px);
+    position: absolute;
+    font-family: sans-serif;
+  }
+  #eventTitleInput {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px gray;
+  }
+  #eventTitleInput.error {
+    border: 2px solid red;
+  }
+  #cancelButton,
+  #deleteButton {
+    background-color: #d36c6c;
+  }
+  #saveButton,
+  #closeButton {
+    background-color: #92a1d1;
+  }
+  #eventText {
+    font-size: 14px;
+  }
+  #modalBackDrop {
+    display: none;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    width: 100vw;
+    height: 150vh;
+  
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .list-todo {
+    margin-bottom: 10px;
+  }
