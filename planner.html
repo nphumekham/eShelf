@@ -19,9 +19,11 @@
         <!-- Additional CSS Files -->
         
         <link rel="stylesheet" href="assets/css/fontawesome.css">
+        <link rel="stylesheet" href="assets/css/todo.css">
         <link rel="stylesheet" href="assets/css/templatemo-eduwell-style.css">
         <link rel="stylesheet" href="assets/css/owl.css">
         <link rel="stylesheet" href="assets/css/lightbox.css">
+        <link rel="stylesheet" href="assets/css/calendar.css">
     <!--
     
     TemplateMo 573 EduWell
@@ -41,7 +43,7 @@
             <div class="col-12">
                 <nav class="main-nav">
                     <a href="index.html" class="logo">
-                      <span>wefocuz</span>
+                        <img src="assets/images/glasses.png" >
                     </a>                      
                     <ul class="nav">
                         <li><a href="index.html">Home</a></li>
@@ -60,51 +62,91 @@
 <!-- ***** Header Area End ***** -->
 
   <!-- ***** Main Banner Area Start ***** -->
-  <section class="main-banner" id="top">
+  <section class="main-banner main-top" id="top">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6  align-self-center">
+        <div class="col-md-5 col-lg-5  align-self-center">
             <div class="header-text">
                 <h2>Better <em>Plan </em>Than Never!</h2>
               </div>
-            <main>
+            <!-- <main>
                 <div class="container">
-                    <div class="tabs">
-                        <a href=""><span class="active">Newest</span></a>
-                        <a href=""><span>Oldest</span></a>
-                        <a href =""><span>Add</span></a>
+                    <div class="tabs tabs-block">
+                        <a href="" class="textbutton"><span class="active">To Do</span></a>
+                        
+                        <a href ="" class="textbutton"><span>Add</span></a>
+                        
+                        <button onclick=""><span><i class="fa fa-plus"></i></span></button>
                     </div>
-                    <div class="content">
+                    <div class="row" id="contact">
+                      <div class="content textlist">
+                    </div>
                     </div>
                 </div>
-            </main>
-        </div> 
-        <div class="col-lg-6  align-self-center">
-          
-          <div class="container-calendar">
-            <div class="calendar">
-              <div class="month">
-                <i class="fa fa-angle-left prev"></i>
-                <div class="date">
-                  <h1></h1>
-                  <p></p>
-                </div>
-                <i class="fa fa-angle-right next"></i>
+            </main> -->
+            <div class="row" id="contact" >
+              <div class="header-text">
+                <h6>Suggestion for Today's Plan</h6><br>
               </div>
-              <div class="weekdays">
-                <div>Sun</div>
-                <div>Mon</div>
-                <div>Tue</div>
-                <div>Wed</div>
-                <div>Thu</div>
-                <div>Fri</div>
-                <div>Sat</div>
-              </div>
-              <div class="days"></div>
+            
+                <div class="main-button-gradient">
+                  <div class="row" >
+                    <a href="#" class="list-todo">Find new Books to read</a>
+                    <a href="#" class="list-todo">Clean the room</a>
+                    <a href="#" class="list-todo">Revise today's class</a>
+                    <a href="#" class="list-todo">Small Cadio</a>
+                    <a href="#" class="list-todo">Learn new skills</a>
+                  </div>
             </div>
+            </div>
+        </div> 
+        <div class=" col-lg-7  align-self-center">
+            <div id="container">
+              <div id="header">
+                <div id="monthDisplay"></div>
+                <div>
+                  <button id="backButton"><i class="fa fa-angle-left"></i></button>
+                  <button id="nextButton"><i class="fa fa-angle-right"></i></button>
+                </div>
+              </div>
+        
+              <div id="weekdays">
+                <div>Sunday</div>
+                <div>Monday</div>
+                <div>Tuesday</div>
+                <div>Wednesday</div>
+                <div>Thursday</div>
+                <div>Friday</div>
+                <div>Saturday</div>
+              </div>
+        
+              <div id="calendar"></div>
+            </div>
+        
+            <div id="newEventModal" >
+              <h2>To Do</h2>
+        
+              <input id="eventTitleInput" placeholder="Title" />
+        
+              <button id="saveButton">Save</button>
+              <button id="cancelButton">Cancel</button>
+            </div>
+        
+            <div id="deleteEventModal">
+              <h2>Confirm Delete?</h2>
+        
+              <p id="eventText"></p>
+        
+              <button id="deleteButton">Delete</button>
+              <button id="closeButton">Close</button>
+            </div>
+        
+            <div id="modalBackDrop"></div>
           </div>
 
-        </div>
+
+ 
+    </section>
       </div>
 
     </div>
@@ -124,6 +166,7 @@
     <script src="assets/js/video.js"></script>
     <script src="assets/js/slick-slider.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script src="assets/js/calendar.js"></script>
 
     
    <!-- The core Firebase JS SDK is always required and must be listed first -->
